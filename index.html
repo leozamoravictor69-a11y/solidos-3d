@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sólidos de revolución</title>
+<script>
+  window.MathJax = { tex: { inlineMath: [['$', '$']] }, svg: { fontCache: 'global' } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+  :root { --fondo: #f4f4f6; --papel: #ffffff; --tinta: #1d1d22; --suave: #5b5c66;
+          --borde: #d9d9df; --acento: #b3261e; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --fondo: #17171b; --papel: #202026; --tinta: #ececf0;
+      --suave: #a4a5b0; --borde: #34343c; --acento: #ff8a80; }
+  }
+  :root[data-theme="dark"] { --fondo: #17171b; --papel: #202026; --tinta: #ececf0;
+      --suave: #a4a5b0; --borde: #34343c; --acento: #ff8a80; }
+  body { margin: 0; background: var(--fondo); color: var(--tinta);
+         font: 16px/1.55 Georgia, "Palatino Linotype", Palatino, serif; }
+  main { max-width: 52rem; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { color: var(--acento); font-size: 1.5rem; margin: 0 0 4px; }
+  p.intro { color: var(--suave); margin: 0 0 20px; }
+  ol { list-style: none; padding: 0; margin: 0; }
+  li { background: var(--papel); border: 1px solid var(--borde); border-radius: 8px;
+       padding: 10px 14px; margin: 0 0 10px; }
+  a { color: var(--acento); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sólidos de revolución</h1>
+  <p class="intro">Cada sólido del capítulo en tres dimensiones: arrastre para girarlo,
+     use la rueda para acercarlo y el botón derecho para desplazarlo.</p>
+  <ol>
+  <li><a href="solido.html?p=1"><b>Problema 1.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región comprendida entre la curva $y=\sqrt{x}$, el eje $X$ y la recta $x=25$.</span></li>
+  <li><a href="solido.html?p=2"><b>Problema 2.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por el segmento $y=1+\dfrac{x}{3}$, con $0\le x\le 12$, los ejes coordenados y la recta $x=12$.</span></li>
+  <li><a href="solido.html?p=3"><b>Problema 3.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $y=\sqrt{9-x^2}$ y el eje $X$.</span></li>
+  <li><a href="solido.html?p=4"><b>Problema 4.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $y=\sqrt{\cos x}$, con $0\le x\le \pi/2$, y los ejes coordenados.</span></li>
+  <li><a href="solido.html?p=5"><b>Problema 5.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $y=\sqrt{\sec x}$, el eje $X$ y las rectas $x=-\pi/4$ y $x=\pi/4$.</span></li>
+  <li><a href="solido.html?p=6"><b>Problema 6.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por las rectas $y=2-\dfrac{x}{2}$, $y=0$, $x=1$ y $x=2$.</span></li>
+  <li><a href="solido.html?p=7"><b>Problema 7.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la parábola $y=1-x^2$ y el eje $X$.</span></li>
+  <li><a href="solido.html?p=8"><b>Problema 8.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $y=\sqrt{x-1}$, el eje $X$ y la recta $x=5$.</span></li>
+  <li><a href="solido.html?p=9"><b>Problema 9.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $y=\sqrt{25-x^2}$, el eje $X$ y las rectas $x=2$ y $x=4$.</span></li>
+  <li><a href="solido.html?p=10"><b>Problema 10.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $x=2\sqrt{y}$ y las rectas $x=0$ e $y=9$.</span></li>
+  <li><a href="solido.html?p=11"><b>Problema 11.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $y=\ln x$ y las rectas $y=1$, $y=2$ y $x=0$.</span></li>
+  <li><a href="solido.html?p=12"><b>Problema 12.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $y=\sqrt{x}$ y las rectas $y=2$ y $x=0$.</span></li>
+  <li><a href="solido.html?p=13"><b>Problema 13.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $y=\dfrac{1}{\sqrt{(x+1)(x+4)}}$ y las rectas $x=0$, $x=2$ e $y=0$.</span></li>
+  <li><a href="solido.html?p=14"><b>Problema 14.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región del primer cuadrante limitada por las curvas $y=x^3$ e $y=x$.</span></li>
+  <li><a href="solido.html?p=15"><b>Problema 15.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por las parábolas $y=\dfrac{x^2}{4}$ e $y=5-x^2$.</span></li>
+  <li><a href="solido.html?p=16"><b>Problema 16.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la parábola $y^2=x$ y la recta $x=2y$.</span></li>
+  <li><a href="solido.html?p=17"><b>Problema 17.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la parábola $y=\dfrac{x^2}{4}$ y las rectas $x=2$ e $y=0$.</span></li>
+  <li><a href="solido.html?p=18"><b>Problema 18.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región triangular de vértices $(1,0)$, $(2,1)$ y $(1,1)$.</span></li>
+  <li><a href="solido.html?p=19"><b>Problema 19.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región del primer cuadrante limitada por las curvas $y=x^3$ e $y=4x$.</span></li>
+  <li><a href="solido.html?p=20"><b>Problema 20.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la parábola $y=(x-1)^2$ y la recta $y=1$.</span></li>
+  <li><a href="solido.html?p=21"><b>Problema 21.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la parábola $y=(x-1)^2$ y la recta $y=1$.</span></li>
+  <li><a href="solido.html?p=22"><b>Problema 22.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $y=1$ la región limitada por las parábolas $y=x^2$ y $x=y^2$.</span></li>
+  <li><a href="solido.html?p=23"><b>Problema 23.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $y=2$ la región limitada por la curva $y=e^{-x}$ y las rectas $y=1$ y $x=2$.</span></li>
+  <li><a href="solido.html?p=24"><b>Problema 24.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $y=1$ la región limitada por la curva $y=1+\sec x$ y la recta $y=3$.</span></li>
+  <li><a href="solido.html?p=25"><b>Problema 25.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $y=-1$ la región limitada por las curvas $y=\sen x$ e $y=\cos x$, con $0\le x\le \pi/4$.</span></li>
+  <li><a href="solido.html?p=26"><b>Problema 26.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=2$ la región limitada por la curva $y=x^3$ y las rectas $y=0$ y $x=1$.</span></li>
+  <li><a href="solido.html?p=27"><b>Problema 27.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=-1$ la región limitada por la hipérbola $xy=1$ y las rectas $y=0$, $x=1$ y $x=2$.</span></li>
+  <li><a href="solido.html?p=28"><b>Problema 28.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=3$ la región limitada por las parábolas $x=y^2$ y $x=1-y^2$.</span></li>
+  <li><a href="solido.html?p=29"><b>Problema 29.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=1$ la región limitada por las rectas $y=x$, $y=0$, $x=2$ y $x=4$.</span></li>
+  <li><a href="solido.html?p=30"><b>Problema 30.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=4$ la región limitada por la curva $y=\sqrt{x}$ y las rectas $y=2$ y $x=0$.</span></li>
+  <li><a href="solido.html?p=31"><b>Problema 31.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $y=2$ la región limitada por la curva $y=\sqrt{x}$ y las rectas $y=2$ y $x=0$.</span></li>
+  <li><a href="solido.html?p=32"><b>Problema 32.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $y=-3$ la región limitada por la parábola $y=(x-1)^2$ y la recta $y=1$.</span></li>
+  <li><a href="solido.html?p=33"><b>Problema 33.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=4$ la región limitada por la parábola $y=(x-1)^2$ y la recta $y=1$.</span></li>
+  <li><a href="solido.html?p=34"><b>Problema 34.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por las rectas $y=2x$, $y=\dfrac{x}{2}$ y $x=1$.</span></li>
+  <li><a href="solido.html?p=35"><b>Problema 35.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región del primer cuadrante limitada por la parábola $y=x^2$, el eje $X$ y la recta $x=2$.</span></li>
+  <li><a href="solido.html?p=36"><b>Problema 36.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada superiormente por la curva $y=\sqrt{x}$ e inferiormente por la recta $y=x$.</span></li>
+  <li><a href="solido.html?p=37"><b>Problema 37.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la parábola $x=2y-y^2$ y la recta $x=0$.</span></li>
+  <li><a href="solido.html?p=38"><b>Problema 38.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=8$ la región del primer cuadrante limitada por las curvas $y=x^3$ e $y=4x$.</span></li>
+  <li><a href="solido.html?p=39"><b>Problema 39.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $y=x(x-1)^2$ y el eje $X$.</span></li>
+  <li><a href="solido.html?p=40"><b>Problema 40.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $y=\sen\left(x^2\right)$ y el eje $X$, con $0\le x\le\sqrt{\pi}$.</span></li>
+  <li><a href="solido.html?p=41"><b>Problema 41.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $y=e^{-x^2}$ y las rectas $y=0$, $x=0$ y $x=1$.</span></li>
+  <li><a href="solido.html?p=42"><b>Problema 42.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $y=x^3$ y las rectas $y=0$, $x=1$ y $x=2$.</span></li>
+  <li><a href="solido.html?p=43"><b>Problema 43.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la parábola $y=4x-x^2$ y la recta $y=x$.</span></li>
+  <li><a href="solido.html?p=44"><b>Problema 44.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por las parábolas $y=x^2$ e $y=6x-2x^2$.</span></li>
+  <li><a href="solido.html?p=45"><b>Problema 45.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la hipérbola $xy=1$ y las rectas $x=0$, $y=1$ e $y=3$.</span></li>
+  <li><a href="solido.html?p=46"><b>Problema 46.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $y=\sqrt{x}$ y las rectas $x=0$ e $y=2$.</span></li>
+  <li><a href="solido.html?p=47"><b>Problema 47.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la curva $x=4y^2-y^3$ y la recta $x=0$.</span></li>
+  <li><a href="solido.html?p=48"><b>Problema 48.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la recta $x+y=3$ y la parábola $x=4-(y-1)^2$.</span></li>
+  <li><a href="solido.html?p=49"><b>Problema 49.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por la parábola $x=1+(y-2)^2$ y la recta $x=2$.</span></li>
+  <li><a href="solido.html?p=50"><b>Problema 50.</b></a> <span class="enun">Una pieza de motor tiene la forma del sólido que se genera al girar alrededor del eje $Y$ la región comprendida entre las gráficas de $f(x)=2x+1$ y $g(x)=\dfrac{x^2}{2}+1$. Hallar el volumen de la pieza.</span></li>
+  <li><a href="solido.html?p=51"><b>Problema 51.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $Y$ la región limitada por la curva $y=\dfrac{8}{(x^2+1)(x^2+4)}$ y las rectas $x=0$, $x=1$ e $y=0$.</span></li>
+  <li><a href="solido.html?p=52"><b>Problema 52.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor de la recta $x=-1$ la región limitada por las parábolas $y=x^2-4x$ e $y=-x^2+4x$.</span></li>
+  <li><a href="solido.html?p=53"><b>Problema 53.</b></a> <span class="enun">Hallar el volumen del sólido que se genera al girar alrededor del eje $X$ la región limitada por las curvas $y=\sqrt{x}$, $y=\sqrt{1-x}$ y el eje $X$.</span></li>
+  <li><a href="solido.html?p=54"><b>Problema 54.</b></a> <span class="enun">Deducir la fórmula del volumen de un cono circular recto de altura $h$ y radio de la base $r$, considerándolo engendrado por la rotación alrededor del eje $X$ del triángulo limitado por la recta $y=\dfrac{r}{h}\,x$, el eje $X$ y la recta $x=h$. La figura está dibujada para $r=1$ y $h=2$.</span></li>
+  <li><a href="solido.html?p=55"><b>Problema 55.</b></a> <span class="enun">Deducir la fórmula del volumen de un tronco de cono de altura $h$ y radios de las bases $r$ y $R$, considerándolo engendrado por la rotación alrededor del eje $X$ del trapecio limitado por la recta $y=r+\dfrac{R-r}{h}\,x$, los ejes coordenados y la recta $x=h$. La figura está dibujada para $r=1$, $R=2$ y $h=2$.</span></li>
+  <li><a href="solido.html?p=56"><b>Problema 56.</b></a> <span class="enun">Deducir la fórmula del volumen de una esfera de radio $r$, considerándola engendrada por la rotación alrededor del eje $X$ del semicírculo limitado por la curva $y=\sqrt{r^2-x^2}$ y el eje $X$. La figura está dibujada para $r=1$.</span></li>
+  <li><a href="solido.html?p=57"><b>Problema 57.</b></a> <span class="enun">Deducir la fórmula del volumen de un casquete esférico de altura $h$ de una esfera de radio $r$, con $0&lt;h\le 2r$. El casquete se engendra al girar alrededor del eje $X$ la región limitada por la curva $y=\sqrt{r^2-x^2}$, el eje $X$ y la recta $x=r-h$. La figura está dibujada para $r=2$ y $h=1$.</span></li>
+  <li><a href="solido.html?p=58"><b>Problema 58.</b></a> <span class="enun">Un toro se engendra al girar el disco $x^2+y^2\le a^2$ alrededor de la recta $x=b$, con $b&gt;a&gt;0$. Hallar su volumen. La figura está dibujada para $a=1$ y $b=3$.</span></li>
+  <li><a href="solido.html?p=59"><b>Problema 59.</b></a> <span class="enun">Dos esferas de radio $r$ se cortan de modo que el centro de cada una está sobre la superficie de la otra. Hallar el volumen de la parte común a ambas. La figura está dibujada para $r=2$.</span></li>
+  <li><a href="solido.html?p=60"><b>Problema 60.</b></a> <span class="enun">Por el centro de una esfera de radio $R$ se taladra un agujero cilíndrico de radio $r&lt;R$. Hallar el volumen de la parte restante de la esfera. La figura está dibujada para $R=2$ y $r=1$.</span></li>
+  <li><a href="solido.html?p=61"><b>Problema 61.</b></a> <span class="enun">Un barril de altura $h$ y radio máximo $R$ se engendra al girar alrededor del eje $X$ el arco de parábola $y=R-cx^2$, con $-h/2\le x\le h/2$, donde $c$ es una constante positiva. a) Demostrar que el radio de cada extremo del barril es $r=R-d$, donde $d=\dfrac{ch^2}{4}$. b) Demostrar que el volumen del barril es $V=\dfrac{\pi h}{3}\left(2R^2+r^2-\dfrac{2}{5}d^2\right)$. La figura está dibujada para $R=2$, $c=1/2$ y $h=2$.</span></li>
+  </ol>
+</main>
+</body>
+</html>

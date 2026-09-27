@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sólido de revolución</title>
+<style>
+  :root {
+    --fondo: #f4f4f6; --papel: #ffffff; --tinta: #1d1d22; --suave: #5b5c66;
+    --borde: #d9d9df; --acento: #b3261e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fondo: #17171b; --papel: #202026; --tinta: #ececf0; --suave: #a4a5b0;
+      --borde: #34343c; --acento: #ff8a80; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fondo: #17171b; --papel: #202026; --tinta: #ececf0; --suave: #a4a5b0;
+    --borde: #34343c; --acento: #ff8a80; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--fondo); color: var(--tinta);
+    font: 16px/1.5 Georgia, "Palatino Linotype", Palatino, serif;
+    display: flex; flex-direction: column;
+  }
+  header {
+    padding: 12px 16px 8px; background: var(--papel);
+    border-bottom: 1px solid var(--borde);
+  }
+  .fila { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h1 { margin: 0; font-size: 1.15rem; color: var(--acento); font-weight: 700; }
+  nav { margin-left: auto; display: flex; gap: 14px; font-size: 0.9rem; }
+  nav a { color: var(--suave); text-decoration: none; }
+  nav a:hover { color: var(--tinta); text-decoration: underline; }
+  nav a.inactivo { visibility: hidden; }
+  #enunciado { margin: 6px 0 0; max-width: 60rem; }
+  #lienzo { position: relative; flex: 1; min-height: 320px; overflow: hidden; }
+  #lienzo canvas { display: block; }
+  .rotulos { position: absolute; top: 0; left: 0; pointer-events: none; }
+  .rotulo { color: #111; font-size: 15px; white-space: nowrap; }
+  .rotulo.eje { font-style: italic; font-size: 17px; }
+  .rotulo.numero { font-size: 13px; }
+  .rotulo.giro { color: #c65f00; background: #fff; padding: 0 3px; }
+  footer {
+    display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center;
+    padding: 8px 16px; background: var(--papel); border-top: 1px solid var(--borde);
+    font-size: 0.9rem; color: var(--suave);
+  }
+  footer label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; color: var(--tinta); }
+  footer button {
+    font: inherit; padding: 3px 10px; border-radius: 6px; cursor: pointer;
+    border: 1px solid var(--borde); background: var(--fondo); color: var(--tinta);
+  }
+  .ayuda { margin-left: auto; }
+  @media (max-width: 600px) { .ayuda { margin-left: 0; } }
+</style>
+<script src="datos.js"></script>
+<script>
+  //  Las fórmulas del enunciado, en SVG: MathJax no necesita hojas de
+  //  estilo ni fuentes externas.
+  window.MathJax = { tex: { inlineMath: [['$', '$']] },
+                     svg: { fontCache: 'global' }, startup: { typeset: false } };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+<header>
+  <div class="fila">
+    <h1 id="titulo">Sólido de revolución</h1>
+    <nav>
+      <a id="anterior" href="#">‹ Anterior</a>
+      <a href="index.html">Todos</a>
+      <a id="siguiente" href="#">Siguiente ›</a>
+    </nav>
+  </div>
+  <p id="enunciado"></p>
+</header>
+<div id="lienzo"></div>
+<footer>
+  <label><input type="checkbox" id="verCorte" checked> Cortar un cuarto</label>
+  <label><input type="checkbox" id="verMalla" checked> Malla</label>
+  <label><input type="checkbox" id="verSuelo" checked> Plano XY</label>
+  <label><input type="checkbox" id="verEjes" checked> Ejes</label>
+  <button id="vistaInicial" type="button">Vista inicial</button>
+  <span class="ayuda">Arrastre para girar · rueda para acercar · botón derecho para desplazar</span>
+</footer>
+<script>
+  //  El módulo arranca cuando la página ha cargado sus scripts.
+  window.addEventListener('load', () => import('./solido3d.js'));
+</script>
+</body>
+</html>
