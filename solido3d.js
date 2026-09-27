@@ -79,7 +79,9 @@ lienzo.appendChild(rotulos.domElement);
 const scene = new THREE.Scene();
 const tam = D.tam;
 const camera = new THREE.PerspectiveCamera(30, 1, tam * 0.01, tam * 200);
-camera.up.set(0, 0, 1);
+// De pie (un tanque, una torre): la vertical es el eje Y, que es el del
+// sólido; si no, la Z, con el plano XY de suelo.
+if (D.de_pie) camera.up.set(0, 1, 0); else camera.up.set(0, 0, 1);
 camera.position.set(...D.camara);
 scene.add(camera);
 scene.add(new THREE.AmbientLight(0xffffff, 0.62));
@@ -249,6 +251,11 @@ const suelo = new THREE.Group();
                   new THREE.LineBasicMaterial({ color: 0xa8a9b0 })));
 }
 scene.add(suelo);
+// De pie, el plano XY es vertical y atravesaría el sólido: se empieza sin él.
+if (D.de_pie) {
+  suelo.visible = false;
+  document.getElementById('verSuelo').checked = false;
+}
 
 const ejes = new THREE.Group();
 {
